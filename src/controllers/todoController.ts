@@ -68,3 +68,9 @@ export const getTodo = async (req: Request<Id>, res: Response<TodoDoc>) => {
 
   return res.status(200).json(todo)
 }
+
+export const getAllTodos = async (req: Request, res: Response<TodoDoc[]>) => {
+  const todos = await Todo.find<TodoDoc>()
+
+  return res.status(200).json(todos)
+}
