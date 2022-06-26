@@ -1,11 +1,11 @@
 import mongoose from "mongoose"
 
-interface ITodo {
+export interface ITodo {
   description: string
-  todosStatus: boolean
+  todoStatus: boolean
 }
 
-interface TodoDoc extends mongoose.Document {
+export interface TodoDoc extends mongoose.Document {
   description: string
   todoStatus: boolean
 }
