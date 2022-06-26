@@ -10,7 +10,7 @@ interface TodoDoc extends mongoose.Document {
   todoStatus: boolean
 }
 
-interface ITodoModel extends mongoose.Model<any> {
+interface ITodoModel extends mongoose.Model<TodoDoc> {
   build(attr: ITodo): TodoDoc
 }
 
